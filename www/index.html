@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Your app title -->
+    <title>MouseBox Pocket</title>
+
+    <!-- This template defaults to the iOS CSS theme. To support both iOS and material design themes, see the Framework7 Tutorial at the link below:
+        http://www.idangero.us/framework7/tutorials/maintain-both-ios-and-material-themes-in-single-app.html
+     -->
+
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
+
+    <link rel="stylesheet" href="css/framework7-icons.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+
+
+    <link rel="stylesheet" type="text/css" href="css/home.css"> </head>
+
+</head>
+
+<body>
+    <!-- Status bar overlay for full screen mode (PhoneGap) -->
+    <div class="statusbar-overlay"></div>
+
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Right panel with reveal effect-->
+    <div class="panel panel-right panel-reveal">
+        <div class="content-block">
+            <a href="about.html">Sobre Aplicativo</a>
+        </div>
+    </div>
+
+    <!-- Views -->
+    <div class="views">
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+            <!-- Top Navbar-->
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
+                    <div class="center sliding"><strong>MouseBox Pocket</strong></div>
+                </div>
+            </div>
+            <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
+            <div class="pages navbar-through toolbar-through">
+                <!-- Page, "data-page" contains page name -->
+                <div data-page="index" class="page">
+                    <!-- Scrollable page content -->
+                    <div class="page-content">
+
+                        <section id="hero" class="hero hero-1">
+                            <div class="front-content page-enter-animated">
+                                <div class="container-mid"> <img class="logo" src="img/logo_white_2x.png" alt="logo">
+                                    <div class="cycle-wrapper">
+                                        <div id="cycle">
+                                            <div class="slide">
+                                                <h1>DESIGN<span> & </span><br>DIGITAL CRIATIVO<br>SOLUÇÕES.</h1></div>
+                                            <div class="slide">
+                                                <h1>AGÊNCIA<span> & </span><br>DESIGN EMPRESAS<br>ESTRATÉGIAS.</h1></div>
+                                            <div class="slide">
+                                                <h1>MODERNO<span> & </span><br>CRIAÇÃO SITES<br>DESENVOLVIMENTO.</h1></div>
+                                        </div>
+                                    </div>
+                                    <p>DEV WALDIR MAURICIO JUNIOR</p>
+                                </div>
+                            </div>
+                            <div class="background-content page-enter-animated">
+                                <div class="level-1">
+                                    <div class="bg-overlay"></div>
+                                    <div class="bg-pattern"></div>
+                                    <div id="canvas">
+                                        <canvas class="bg-effect layer" data-depth="0.2"></canvas>
+                                    </div>
+                                </div>
+                                <div class="level-2">
+                                    <div class="bg-image layer" data-depth="0.04"></div>
+                                    <div class="bg-video layer" data-depth="0.04"></div>
+                                    <div class="bg-color layer" data-depth="0.04"></div>
+                                </div>
+                            </div>
+                        </section>
+
+
+                    </div>
+                </div>
+            </div>
+            <!-- Bottom Toolbar-->
+            <div class="toolbar tabbar tabbar-labels">
+                <div class="toolbar-inner">
+                    <a href="#" class="back link">
+                        <i class="f7-icons">home</i>
+                        <span class="tabbar-label">Home</span>
+                    </a>
+                    <a href="projetos.html" class="link">
+                        <i class="icon demo-icon-2">
+                            <span class="badge bg-red">5</span>
+                        </i>
+                        <span class="tabbar-label">Projetos</span>
+                    </a>
+                    <a href="sobre.html" class="link">
+                        <i class="f7-icons">info</i>
+                        <span class="tabbar-label">Sobre</span>
+                    </a>
+                    <a href="contato.html" class="link">
+                        <i class="f7-icons">email</i>
+                        <span class="tabbar-label">Contato</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+    <script type="text/javascript" src="js/home.js"></script>
+</body>
+
+</html>
